@@ -1,0 +1,65 @@
+[
+    {
+        "name": "ABC",
+        "gender": "male",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "123"
+    },
+    {
+        "name": "DEF",
+        "gender": "male",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "456"
+    },
+    {
+        "name": "GHI",
+        "gender": "female",
+        "status": "absent",
+        "class": "3A",
+        "rollNo": "789"
+    },
+    {
+        "name": "JKL",
+        "gender": "male",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "012"
+    },
+    {
+        "name": "MNO",
+        "gender": "female",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "345"
+    },
+    {
+        "name": "PQR",
+        "gender": "male",
+        "status": "absent",
+        "class": "3A",
+        "rollNo": "678"
+    },
+    {
+        "name": "STU",
+        "gender": "male",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "901"
+    },
+    {
+        "name": "VWX",
+        "gender": "female",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "234"
+    },
+    {
+        "name": "YZA",
+        "gender": "female",
+        "status": "present",
+        "class": "3A",
+        "rollNo": "567"
+    }
+]

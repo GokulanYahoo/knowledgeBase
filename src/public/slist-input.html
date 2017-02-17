@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/iron-input/iron-input.html">
+
+
+<!--
+`slist-input`
+input text box
+
+@demo demo/index.html
+-->
+
+<dom-module id="slist-input">
+
+  <link rel="import" type="css" href="style.css">
+
+  <template>
+    <div id="paperInputElement">
+      <paper-input type="{{type}}" always-float-label label="{{label}}" maxlength="12" value={{username::input}}></paper-input>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'slist-input',
+
+      properties: {
+        notify: true,
+        readOnly: false,
+        label: {
+          type: String
+        },
+
+        type: {
+          type: String
+        },
+      },
+    });
+  </script>
+
+</dom-module>

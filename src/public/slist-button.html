@@ -1,0 +1,68 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+
+<!--
+`slist-button`
+Button component for slist web app
+
+@demo demo/index.html
+-->
+
+<dom-module id="slist-button">
+
+  <link rel="import" type="css" href="style.css">
+
+  <template>
+    <paper-button id="slist-button">{{text}}</paper-button>
+
+    <!-- <input id="input" type="text" value="{{searchQuery::input}}" on-keydown="checkForEnter" on-change="_inputChanged" class="form-control"
+      placeholder="Search"> -->
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'slist-button',
+
+      properties: {
+        text: {
+          type: String
+        },
+
+        userName: {
+          type: String,
+          value: '',
+        },
+
+        password: {
+          type: String,
+          value: '',
+        },
+      },
+
+      confirmClick: function () {
+        alert('This is after paper-button click');
+      },
+
+
+
+      checkForEnter: function (e) {
+        // check if 'enter' was pressed
+        if (e.keyCode === 13) {
+          // enter pressed!
+          console.log("ENTER!");
+          this.fire('fire', { searchQuery: this.searchQuery });
+        }
+      },
+
+      loginCheck: function(userName, password) {
+        if (this.userName === 'admin' && this.password === 'password') 
+        {
+          alert('Login success');
+        }
+      }
+    });
+  </script>
+
+</dom-module>

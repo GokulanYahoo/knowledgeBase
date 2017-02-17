@@ -1,0 +1,66 @@
+.slist-button {
+	color: white;
+	background: #00bfff;
+	border-radius: 5px;
+	border-style: solid;
+    border-width: 4px;
+    border-color: #87ceeb;
+	font-family: Calibri;
+	font-variant: normal;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: none;
+	height: 70px;
+	width: 420px;
+}
+
+#paperInputElement {
+	--paper-input-container-input: {
+      font-size: 12px;
+      left: 5px;
+    };
+    
+    --paper-input-container-focus-color: red;
+    width: 420px;
+}
+
+#slistPaperCard {
+	max-height: 75px;
+	max-width: 200px;
+	background: #87ceeb;
+}
+
+#slistImage {
+	float: left;
+	padding: 10px 10px 10px 10px;
+	max-height: 20px;
+	max-width: 20px;
+}
+
+#slistName {
+	float: left;
+	padding: 10px 10px 0px 10px;
+	font-family: Calibri;
+	font-size: 12px;
+	width: 100px;
+}
+
+#slistRollNo {
+	float: left;
+	padding: 0px 0px 0px 10px;	
+	font-family: Calibri;
+	font-size: 12px;
+	width: 100px;
+}
+
+#slistClass {
+	float: left;
+	padding: 0px 0px 0px 10px;
+	font-family: Calibri;
+	font-size: 12px;
+	width: 100px;
+}
+
+#slistCardRefresh {
+	padding: 0px 0px 0px 0px;
+}

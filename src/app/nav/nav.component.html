@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default navbar-custom ">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span> 
+      			</button>
+      			 <div class="container-fluid">
+      			 <a class="navbar-brand navbar-brand-logo" [routerLink]="['/slist/home']">
+                   <img style="max-width: 100%; height: 55px; padding-bottom: 25px;" src="./img/SList_Home_Icon.png">
+                </a>
+                <a class="navbar-brand" [routerLink]="['/slist/home']"> SList </a>
+      			</div>				
+			</div>
+			<div id="countLabel" style="padding: 20px">
+			<span class="pull-left label label-danger" > present today</span>
+			</div>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="nav navbar-nav pull-right">
+					<li> <a [routerLink]="['/slist/home']" class="pull-right">Welcome User</a></li>
+					<li class="divider-vertical"></li>
+					<!-- <li><a [routerLink]="['/slist/contact']" class="pull-right">Contact</a></li>
+					<li class="divider-vertical"></li> -->
+					<li> <a [routerLink]="['/slist/about']" class="pull-right">About</a></li>
+					<li class="divider-vertical"></li>
+					<li> 
+						<a [routerLink]="['']" class="pull-right">
+							<img src="./img/logout.png">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>

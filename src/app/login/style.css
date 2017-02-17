@@ -1,0 +1,36 @@
+#slistlogin {
+	color: white;
+	background: #00bfff;
+	border-radius: 5px;
+	border-style: solid;
+    border-width: 4px;
+    border-color: #87ceeb;
+	font-family: Calibri;
+	font-variant: normal;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: none;
+	height: 70px;
+	width: 420px;
+}
+
+.usernameinput {
+	padding: 0px 100px 0px 50px;
+
+}
+
+.form-control {
+	width: 100px;
+}
+
+#heading1 {
+	color: lightskyblue;
+}
+
+#headingSList22 {
+	color: darkgrey;
+}
+
+.Sl {
+	color: lightskyblue;
+}

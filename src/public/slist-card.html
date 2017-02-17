@@ -1,0 +1,87 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/iron-label/iron-label.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+
+<!--
+`slist-card`
+Polymer card component for slist web app
+
+@demo demo/index.html 
+-->
+
+<dom-module id="slist-card">
+  <link rel="import" type="css" href="style.css">
+
+  <template>
+    <paper-card id="slistPaperCard" on-tap="findGender">
+      <div id="slistImage">
+        <!-- <iron-image src="{{imageSource}}"></iron-image> -->
+        
+      </div>
+      <div id="slistName">
+        <iron-label>Name: {{detail.name}}</iron-label>
+      </div>
+      <div id="slistRollNo">
+        <iron-label>Roll No: {{detail.rollNo}}</iron-label>
+      </div>
+      <div id="slistClass">
+        <iron-label>Class: {{detail.class}}</iron-label>
+      </div>
+
+      <div id="slistGender">
+        <iron-label id="genderLabel">Gender: {{detail.gender}}</iron-label>
+      </div>
+
+      <span id="slistCardRefresh">
+        <paper-icon-button icon="refresh"></paper-icon-button>
+      </span>
+    </paper-card>
+
+
+    <template is="dom-if" if="{{genderCheck}}">
+      <div>
+        <p>Executed</p>
+      </div>
+    </template>
+
+    <template is="dom-repeat" items={{alerts}} index-as="index">
+      <li>{{item}}<button on-click="removeItemFromArray">Remove</button></li>
+    </template>
+
+
+  </template>
+
+
+
+
+
+  <script>
+    Polymer({
+
+      is: 'slist-card',
+
+      properties: {
+        detail: {
+          type: Object,
+        },
+
+        imageSource: {
+          type: String,
+          value: './img/female.png'
+        },
+
+
+      },
+
+      findGender: function () {
+        var genderValue = this.$.genderLabel.value;
+        console.log("Gender: ", genderValue);
+      },
+
+    });
+  </script>
+</dom-module>

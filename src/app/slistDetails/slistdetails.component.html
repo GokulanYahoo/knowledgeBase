@@ -1,0 +1,40 @@
+<style>
+#card {
+  display: inline-block;
+  width: 200px;
+  height: 80px;
+}
+
+#cardImage {
+  float: left;
+  padding: 10px 0px 0px 10px;
+}
+
+#cardDetails {
+  float: left;
+  font-family: Calibri;
+  font-size: 12px;
+  line-height: 5px;
+  padding: 15px 0px 0px 10px;
+}
+</style>
+
+<p>Test: {{studentDet.studentDetails.studentName | stringTruncate: 13}}</p>
+<div class="container">
+  <div class="row card-container">  
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let item of studentDet">
+      <div id="card" [style.background-color] = "getCardBackground(item.status)">
+        <div id="cardImage">
+          <img src="./img/{{item.gender | lowercase}}.png" alt="Avatar" style="width:55px; height:60px">
+        </div>
+        <div id="cardDetails">
+          <p>Name: {{item.studentName | stringTruncate: 13}}</p>
+          <p>RollNo: {{item.rollNo | stringTruncate: 13}}</p>
+          <p>Class: {{item.classDiv | stringTruncate: 13}}</p>
+
+                    
+        </div>
+      <div>
+    </div>
+  </div>
+</div>
