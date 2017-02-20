@@ -19,10 +19,9 @@
 }
 </style>
 
-<p>Test: {{studentDet.studentDetails.studentName | stringTruncate: 13}}</p>
 <div class="container">
   <div class="row card-container">  
-    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let item of studentDet">
+    <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let item of studentDetailsResponse">
       <div id="card" [style.background-color] = "getCardBackground(item.status)">
         <div id="cardImage">
           <img src="./img/{{item.gender | lowercase}}.png" alt="Avatar" style="width:55px; height:60px">
@@ -30,11 +29,13 @@
         <div id="cardDetails">
           <p>Name: {{item.studentName | stringTruncate: 13}}</p>
           <p>RollNo: {{item.rollNo | stringTruncate: 13}}</p>
-          <p>Class: {{item.classDiv | stringTruncate: 13}}</p>
-
-                    
+          <p>Class: {{item.classDiv | stringTruncate: 13}}</p>                   
         </div>
       <div>
     </div>
   </div>
+</div>
+
+<div id="loadMore">
+  <!-- <slist-button text="Load More" (click)="validateCredentials(username, password)"></slist-button> -->
 </div>
