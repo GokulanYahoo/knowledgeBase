@@ -1,0 +1,27 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-spinner/paper-spinner.html">
+<link rel="import" href="../paper-spinner/paper-spinner-lite.html">
+
+<!--
+`slist-loader`
+Loader component (Spinner) for slist web app
+
+@demo demo/index.html 
+-->
+
+<dom-module id="slist-loader">
+
+  <link rel="import" type="css" href="style.css">
+  
+  <template>
+  	<paper-spinner-lite id = "slist-loader" active></paper-spinner-lite>
+  </template>
+  
+  <script>
+    Polymer({
+
+      is: 'slist-loader'
+
+    });
+  </script>
+</dom-module>

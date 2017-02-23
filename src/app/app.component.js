@@ -16,13 +16,4 @@ AppComponent = __decorate([
     __metadata("design:paramtypes", [shared_1.ApiService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
-/*import { Component } from '@angular/core';
-
-@Component({
-    moduleId: module.id,
-    selector: 'app',
-    templateUrl: 'app.component.html'
-})
-
-export class AppComponent { }*/ 
 //# sourceMappingURL=app.component.js.map

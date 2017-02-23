@@ -14,7 +14,7 @@ Button component for slist web app
   <link rel="import" type="css" href="style.css">
 
   <template>
-    <paper-button id="slist-button">{{text}}</paper-button>
+    <paper-button id="slist-button" on-tap="buttonTapEvent">{{text}}</paper-button>
 
     <!-- <input id="input" type="text" value="{{searchQuery::input}}" on-keydown="checkForEnter" on-change="_inputChanged" class="form-control"
       placeholder="Search"> -->
@@ -29,16 +29,6 @@ Button component for slist web app
         text: {
           type: String
         },
-
-        userName: {
-          type: String,
-          value: '',
-        },
-
-        password: {
-          type: String,
-          value: '',
-        },
       },
 
       confirmClick: function () {
@@ -46,6 +36,13 @@ Button component for slist web app
       },
 
 
+      buttonTapEvent: function (e, detail) {
+        this.fire('buttonFire', {
+          buttonEvent: true
+        });
+      },
+
+      ready: function () { },
 
       checkForEnter: function (e) {
         // check if 'enter' was pressed
@@ -56,9 +53,8 @@ Button component for slist web app
         }
       },
 
-      loginCheck: function(userName, password) {
-        if (this.userName === 'admin' && this.password === 'password') 
-        {
+      loginCheck: function (userName, password) {
+        if (this.userName === 'admin' && this.password === 'password') {
           alert('Login success');
         }
       }

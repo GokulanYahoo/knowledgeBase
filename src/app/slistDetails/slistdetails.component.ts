@@ -16,7 +16,7 @@ export class SListDetailsComponent implements OnInit {
 
     }
 
-    private url = "http://localhost:8081/getstudentlist?pageNum=0&size=10";
+    private initialPageLoadUrl = "http://localhost:8081/getStudentList?pageNum=1&size=20";
     studentDet: StudentDetail;
     errorMessage: string;
     response: Response;
@@ -24,15 +24,15 @@ export class SListDetailsComponent implements OnInit {
 
 
     ngOnInit() {
-        this.getStudentDetails();
+        this.getStudentDetails(this.initialPageLoadUrl);
     }
 
-    getStudentDetails() {
-        this.communicatorService.getStudents(this.url).subscribe(
+    getStudentDetails(pageLoadUrl: string) {
+        this.communicatorService.getStudents(pageLoadUrl).subscribe(
             student => {
                 this.studentDet = student;
                 this.studentDetailsResponse = this.studentDet.studentDetails;
-            //console.log('Students details: ' + JSON.stringify({studentDetailsResponse}));
+                //console.log('Students details: ' + JSON.stringify(this.studentDetailsResponse));
             });
     }
 
@@ -42,7 +42,17 @@ export class SListDetailsComponent implements OnInit {
         }
 
         else {
-            return "lightblue";
+            return "lightgrey";
         }
+    }
+
+    pageNum = 2;
+    size = 8;
+    loadMoreUrl: string;
+
+    loadMore() {        
+        this.loadMoreUrl = "http://localhost:8081/getStudentList?pageNum=" + this.pageNum + "&size=" + this.size;
+        console.log('Page Load URL: ', this.loadMoreUrl);
+        this.getStudentDetails(this.loadMoreUrl);
     }
 }

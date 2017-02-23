@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input-container.html">
 <link rel="import" href="../../bower_components/iron-input/iron-input.html">
 
 
@@ -16,8 +17,19 @@ input text box
 
   <template>
     <div id="paperInputElement">
-      <paper-input type="{{type}}" always-float-label label="{{label}}" maxlength="12" value={{username::input}}></paper-input>
+      <paper-input type="{{type}}" always-float-label label="{{label}}" maxlength="{{length}}" bind-value={{inputValue}}></paper-input>
+
+      <!-- <input is="iron-input" type="{{stype}}" maxlength="{{slngt}}" bind-value="{{svalue}}" on-value-changed="buttonTap"/> -->
     </div>
+
+    <!-- <paper-input-container>
+      <label>USERNAME</label>
+      <input
+        is         = "iron-input"
+        bind-value = "{{inputValue::input}}"
+        autofocus>
+      </input>
+    </paper-input-container> -->
   </template>
 
   <script>
@@ -34,6 +46,15 @@ input text box
 
         type: {
           type: String
+        },
+
+        inputValue: {
+          type: String,
+          value: '',
+        },
+
+        length: {
+          type: String,
         },
       },
     });

@@ -65,3 +65,8 @@
 #slistCardRefresh {
 	padding: 0px 0px 0px 0px;
 }
+
+  .slist-loader {
+    --paper-spinner-stroke-width: 5px;
+    --paper-spinner-color: silver;
+  }

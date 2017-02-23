@@ -4,6 +4,7 @@
 <head>
 	<!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
 	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link rel="import" href="../../bower_components/polymer/polymer.html">
 </head>
 
 <br><br>
@@ -18,7 +19,9 @@
 <br/>
 <br/>
 
-<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+<!-- <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=""> -->
+<body>
+	<!--
 <div class="login-form-1" align="center">
 	<div class="login-form-main-message">
 	</div>
@@ -34,12 +37,25 @@
 	<input align="center" type="password" class="form-control" [(ngModel)]="password" id="lg_password" name="lg_password" placeholder="Password"
 		required="required" style="width:420px">
 </div>
+-->
+<!-- <slist-input #userNameInput type="text" label="USERNAME" [ngModel]="inputValue"></slist-input>
+<slist-input #passwordInput type="password" label="PASSWORD" [ngModel]="inputValue"></slist-input>
 
-<slist-button text="Sign In" (click)="validateCredentials(username, password)"></slist-button>
+<slist-button text="Sign In" (click)="validateCredentials(userNameInput, passwordInput)"></slist-button> -->
+
+<!-- <slist-button text="Sign In" (click)="validateCredentials(username, password)"></slist-button> -->
+<!-- </div>
 </div>
-</div>
-</div>
-<div [hidden]="!validation" class="alert alert-danger" >Wrong Credentials</div>
+</div> -->
+<!-- <div [hidden]="!validation" class="alert alert-danger" >Wrong Credentials</div> -->
+
+<!-- <slist-input #username stype="String" slabel="USERNAME" slngt="12" [svalue]="suserName"></slist-input>
+<slist-input #username stype="String" slabel="USERNAME" slngt="12" [svalue]="suserName"></slist-input> -->
+
+<slist-input #username type="text" label="USERNAME" length = "12" [inputValue]="susername"></slist-input>
+<slist-input #password type="password" label="PASSWORD" length = "8" [inputValue]="spassword"></slist-input>
+<slist-button text="Sign In" (buttonFire)="validateLogin($event)"></slist-button>
+
 </body>
 
 </html>
